@@ -22,7 +22,7 @@ $(function() {
 	    	$('#mainContent_tab').tabs('close', 0);//删除之前打开的tab
 			$('#mainContent_tab').tabs('add', {
 				index: 0,
-				title : module_name,
+				title : row.resourceName,
 				href :  ctx + '/' + row.path
 				//closable : true
 			});
