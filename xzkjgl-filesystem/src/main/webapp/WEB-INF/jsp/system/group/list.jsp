@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="GroupHandler.editGroup();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="GroupHandler.editGroup();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="GroupHandler.bindUser();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="GroupHandler.bindUser();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="GroupHandler.bindRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="GroupHandler.bindRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -93,7 +93,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDelGroup" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="GroupHandler.deleteGroup()">
+        <button type="button" class="btn btn-primary" onclick="GroupHandler.deleteGroup()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>
@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDelGroup" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="GroupHandler.removeFromGroup()">
+        <button type="button" class="btn btn-primary" onclick="GroupHandler.removeFromGroup()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>
@@ -172,12 +172,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  		<!-- 组ID -->
 					<input type="hidden" name="userGroupId" id="user_groupId"/>
 			   		<input type="text" class="form-control" name="findInGroup" id="findInGroup" placeholder="账号   / 用户名称">
-			    	<a class="btn btn-success" href="javascript:void(0)"   onclick="GroupHandler.searchUserGroup();">
+			    	<a class="btn btn-primary" href="javascript:void(0)"   onclick="GroupHandler.searchUserGroup();">
 						<i class="icon-search icon-white"></i>查询
 					</a>
 				 
 					<span class="pull-right">
-				    	<a class="btn btn-success" id="removeFromGroup" href="javascript:void(0)"   onclick="GroupHandler.removeFromGroup();">
+				    	<a class="btn btn-primary" id="removeFromGroup" href="javascript:void(0)"   onclick="GroupHandler.removeFromGroup();">
 							<i class="icon-fire icon-white"></i>解除组用户
 						</a>
 					</span>

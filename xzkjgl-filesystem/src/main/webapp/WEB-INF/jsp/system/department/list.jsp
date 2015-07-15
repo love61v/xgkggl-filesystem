@@ -55,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="DepartmentHandler.editDepartment();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="DepartmentHandler.editDepartment();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDelDepartment" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="DepartmentHandler.deleteDepartment()">
+        <button type="button" class="btn btn-primary" onclick="DepartmentHandler.deleteDepartment()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>

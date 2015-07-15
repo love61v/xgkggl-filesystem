@@ -29,38 +29,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="${ctx}/js/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="${ctx }/js/plugins/json2/json2.js"></script>
 
+<!-- 日历控件 -->
+<link href='${ctx}/css/plugins/bootstrap_datetimepicker/datepicker.css' media='all' rel='stylesheet' type='text/css' />
+<script src='${ctx}/js/plugins/bootstrap_datetimepicker/bootstrap-datepicker.js' type='text/javascript'></script>
+
+<!-- 表单验证插件 -->
+<script src='${ctx}/js/plugins/validate/jquery.validate.min.js' type='text/javascript'></script>
+<script src='${ctx}/js/plugins/validate/additional-methods.min.js' type='text/javascript'></script>
+<script src='${ctx}/js/plugins/validate/localization/messages_zh.js' type='text/javascript'></script>
+ 
+
 </head>
 
 <body class="easyui-layout">
-	<div data-options="region:'north',border:false" style="color: #fff;height: 110px; background: #0163ac;">
+	<div data-options="region:'north',border:false" style="color: #fff;height: 90px; background: #0163ac;">
 		<div style="margin-top:10px;"> 
-			<span style="font-size: 20pt;">西藏自治区气象局科技项目管理平台</span>
+			<span style="font-size: 20pt;margin-left:20px;">西藏自治区气象局科技项目管理平台</span>
 			<div style="float:right;">
 			    <span>
 			        <i class="icon-user icon-white"></i> <small>欢迎:</small>
 			    	<shiro:principal property="userName"/>
 			    </span>
 				<a  href='${ctx }/logout.html' style="color: #fff;">
-				<span style="margin-left: 10px;">
-						<i class="icon-off icon-white"></i>退出
-				</span>
-					</a>
+					<span style="margin-left: 10px;">
+							<i class="icon-off icon-white"></i>退出
+					</span>
+				</a>
 			</div>
 			
-			 <div style="float:right;padding-top:20px;margin-right: 200px;">
-		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">局设项目管理</a>
-		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-clipart',size:'large',iconAlign:'top'">合同管理</a>
-		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-smartart',size:'large',iconAlign:'top'">档案管理</a>
-		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">项目统计</a>
-		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-shapes',size:'large',iconAlign:'top'">系统设置</a>
+			 <div style="float:right;padding-top:10px;margin-right: 200px;">
+		        <a href="javascript:void(0)" onclick="MainHandler.loadSubMenu(17)" style="margin-left: 30px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">局设项目管理</a>
+		        <a href="javascript:void(0)" onclick="MainHandler.loadSubMenu(25)" style="margin-left: 30px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-clipart',size:'large',iconAlign:'top'">合同管理</a>
+		        <a href="javascript:void(0)" onclick="MainHandler.loadSubMenu(12)" style="margin-left: 30px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-smartart',size:'large',iconAlign:'top'">档案管理</a>
+		        <a href="javascript:void(0)" onclick="MainHandler.loadSubMenu(31)" style="margin-left: 30px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">项目统计</a>
+		        <a href="javascript:void(0)" onclick="MainHandler.loadSubMenu(2)" style="margin-left: 30px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-shapes',size:'large',iconAlign:'top'">系统设置</a>
 		     </div>
 		</div>
 	</div>
 
 	<!-- 左侧菜单 -->
 	<div data-options="region:'west',split:true,title:'菜单导航'" style="width: 250px; padding: 1px; color: blue;">
-		<div id="main_accordion">
-			
 			<table id="userModule_tree" cellspacing="0" cellpadding="0">
 		        <thead>
 					<tr>
@@ -68,7 +76,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 				</thead>
 		   	</table>
-		</div>
 	</div>
 
 	<!-- 中间主窗体内容 -->

@@ -22,6 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<table id="module_table" cellspacing="0" cellpadding="0">
         <thead>
 			<tr>
+				<th data-options="field:'resourceId',width:80">id</th>
 				<th data-options="field:'resourceName',width:80">名称</th>
 				<th data-options="field:'path',width:60,align:'center'">地址</th>
 				<th data-options="field:'status',width:30, formatter: formatStatus,align:'center'">状态</th>
@@ -58,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="ModuleHandler.editModule();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="ModuleHandler.editModule();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -80,7 +81,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDelModule" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="ModuleHandler.deleteModule()">
+        <button type="button" class="btn btn-primary" onclick="ModuleHandler.deleteModule()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>

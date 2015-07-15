@@ -38,28 +38,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   	<div class="form-inline" >
  		  <form id="user_form" style="margin-top:20px;">
 	   		<input type="text" class="form-control" name="loginName" id="loginName" placeholder="账号  / 用户名称">
-	    	<a class="btn btn-success" href="javascript:void(0)"   onclick="UserHandler.search();">
+	    	<a class="btn btn-primary" href="javascript:void(0)"   onclick="UserHandler.search();">
 				<i class="icon-search icon-white"></i>查询
 			</a>
 			 				
 	  		<shiro:hasAnyRoles name="country_admin,city_admin,system_admin,super_admin">
 				<div class="pull-right"> 
 					  <div class="btn-group" data-toggle="buttons-checkbox">
-			               <button class="btn btn-success" type="button" id="save" onclick="UserHandler.beforeEditUser(1);">
+			               <button class="btn btn-primary" type="button" id="save" onclick="UserHandler.beforeEditUser(1);">
 			               	<i class="icon-plus icon-white"></i>添加
 			               </button>
-			                <button class="btn btn-success" type="button" id="update"  onclick="UserHandler.beforeEditUser(2);">
+			                <button class="btn btn-primary" type="button" id="update"  onclick="UserHandler.beforeEditUser(2);">
 			                	<i class="icon-edit icon-white"></i>修改
 			                </button>
-			                <button class="btn btn-success" type="button"  id="beforeDeleteUser" onclick="UserHandler.beforeDeleteUser();">
+			                <button class="btn btn-primary" type="button"  id="beforeDeleteUser" onclick="UserHandler.beforeDeleteUser();">
 			                	<i class="icon-trash icon-white"></i>删除 
 			                </button>
-			               <button class="btn btn-success" type="button" id="save" onclick="UserHandler.downloadUserTemplate();">
+			              <!--  <button class="btn btn-primary" type="button" id="save" onclick="UserHandler.downloadUserTemplate();">
 			               		<i class="icon-fire icon-white"></i>下载模板
 			               </button>
-			               <button class="btn btn-success" type="button" id="save" onclick="UserHandler.importUser();">
+			               <button class="btn btn-primary" type="button" id="save" onclick="UserHandler.importUser();">
 			               		<i class="icon-tint icon-white"></i>导入用户
-			               </button>
+			               </button> -->
 		             </div>
 	 		</shiro:hasAnyRoles>
 	           	 </div>
@@ -80,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="UserHandler.editUser();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="UserHandler.editUser();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -99,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="UserHandler.authzUser();"><i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定</button>
+        <button type="button" class="btn btn-primary" onclick="UserHandler.authzUser();"><i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -120,7 +120,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDel" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="UserHandler.deleteUser()">
+        <button type="button" class="btn btn-primary" onclick="UserHandler.deleteUser()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>

@@ -33,19 +33,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="form-inline" >
    			<form id="operate_form" style="margin-top:20px;">
 		   		<input type="text" class="form-control" id="operateName" placeholder="请输入名称">
-		    	<a class="btn btn-success" href="javascript:void(0)"   onclick="OperateHandler.search();">
+		    	<a class="btn btn-primary" href="javascript:void(0)"   onclick="OperateHandler.search();">
 					<i class="icon-search icon-white"></i>查询
 				</a>
 			 
 				<div class="pull-right"> 
 				  <div class="btn-group" data-toggle="buttons-checkbox">
-				    	<a class="btn btn-success" id="saveOperate" href="javascript:void(0)"   onclick="OperateHandler.beforeEditOperate(1);">
+				    	<a class="btn btn-primary" id="saveOperate" href="javascript:void(0)"   onclick="OperateHandler.beforeEditOperate(1);">
 							<i class="icon-plus icon-white"></i>添加
 						</a>
-				    	<a class="btn btn-success" id="updateOperate" href="javascript:void(0)" onclick="OperateHandler.beforeEditOperate(2);">
+				    	<a class="btn btn-primary" id="updateOperate" href="javascript:void(0)" onclick="OperateHandler.beforeEditOperate(2);">
 							<i class="icon-edit icon-white"></i>修改
 						</a>
-						<a class="btn btn-success" id="beforeDeleteOperate" href="javascript:void(0)"  onclick="OperateHandler.beforeDeleteOperate();">
+						<a class="btn btn-primary" id="beforeDeleteOperate" href="javascript:void(0)"  onclick="OperateHandler.beforeDeleteOperate();">
 							<i class="icon-trash icon-white"></i>删除 
 						</a>
 					</div>
@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="OperateHandler.editOperate();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="OperateHandler.editOperate();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -89,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDel" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="OperateHandler.deleteOperate()">
+        <button type="button" class="btn btn-primary" onclick="OperateHandler.deleteOperate()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>

@@ -36,20 +36,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		<div class="form-inline" >
 			<form id="role_form" style="margin-top:20px;">
 		   		<input type="text" class="form-control" name="roleName" id="roleName" placeholder="名称">
-		    	<a class="btn btn-success" href="javascript:void(0)"   onclick="RoleHandler.search();">
+		    	<a class="btn btn-primary" href="javascript:void(0)"   onclick="RoleHandler.search();">
 					<i class="icon-search icon-white"></i>查询
 				</a>
 				 
 		   	  	 <shiro:hasAnyRoles name="system_admin,super_admin">
 					<div class="pull-right"> 
 					  <div class="btn-group" data-toggle="buttons-checkbox">
-				    	<a class="btn btn-success" id="saveRole" href="javascript:void(0)"   onclick="RoleHandler.beforeEditRole(1);">
+				    	<a class="btn btn-primary" id="saveRole" href="javascript:void(0)"   onclick="RoleHandler.beforeEditRole(1);">
 							<i class="icon-plus icon-white"></i>添加
 						</a>
-				    	<a class="btn btn-success" id="updateRole" href="javascript:void(0)" onclick="RoleHandler.beforeEditRole(2);">
+				    	<a class="btn btn-primary" id="updateRole" href="javascript:void(0)" onclick="RoleHandler.beforeEditRole(2);">
 							<i class="icon-edit icon-white"></i>修改
 						</a>
-						<a class="btn btn-success" id="beforeDeleteRole" href="javascript:void(0)"  onclick="RoleHandler.beforeDeleteRole();">
+						<a class="btn btn-primary" id="beforeDeleteRole" href="javascript:void(0)"  onclick="RoleHandler.beforeDeleteRole();">
 							<i class="icon-trash icon-white"></i>删除 
 						</a>
 						</div>
@@ -72,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success" onclick="RoleHandler.editRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary" onclick="RoleHandler.editRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -92,11 +92,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="modal-footer">
       	<span class="pull-left"><input type="checkbox" name="allChk" onchange="RoleHandler.allIsCheck(this);" />全选 / 取消</span> 
       	<span id="acceptAuthz" style="margin-right: 10px;">&nbsp;</span>
-        <a class="btn btn-success" href="javascript:void(0)"   onclick="RoleHandler.reloadTree();">
+        <a class="btn btn-primary" href="javascript:void(0)"   onclick="RoleHandler.reloadTree();">
 			<i class="icon-refresh icon-white"></i>刷新
 		</a>
         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-remove icon-white"></i>取消</button>
-        <button type="button" class="btn btn-success"  onclick="RoleHandler.authzRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
+        <button type="button" class="btn btn-primary"  onclick="RoleHandler.authzRole();"><i class="icon-ok icon-white"></i>&nbsp;提&nbsp;&nbsp;交</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button type="button" class="btn btn-danger" id="cancleDel" data-dismiss="modal">
         	<i class="icon-remove icon-white"></i>取消
         </button>
-        <button type="button" class="btn btn-success" onclick="RoleHandler.deleteRole()">
+        <button type="button" class="btn btn-primary" onclick="RoleHandler.deleteRole()">
         	<i class="icon-ok icon-white"></i>&nbsp;确&nbsp;&nbsp;定
         </button>
       </div>

@@ -1,12 +1,5 @@
 var ctx = $('base').attr('href');
 $(function() {
-	$("#main_accordion").accordion({
-		width: 		'240px',
-		height: 	'300px',
-		multiple:	false,
-		fit:		true
-	});
-	 
 	$('#userModule_tree').treegrid({//用户模块菜单 
 		url: 		ctx + '/module/showUserModules.json', 
 		idField: 	'resourceId', 
@@ -25,16 +18,13 @@ $(function() {
 	    	if(node.length > 0){
 	    		return false;
 	    	}
-	    	var module_name = row.resourceName;
-	    	var exitstTab = $('#mainContent_tab').tabs('getTab', module_name);
-			if (exitstTab) {// 已打开标签
-				$('#mainContent_tab').tabs('select', module_name);
-				return false;
-			}
+	    	
+	    	$('#mainContent_tab').tabs('close', 0);//删除之前打开的tab
 			$('#mainContent_tab').tabs('add', {
+				index: 0,
 				title : module_name,
-				href :  ctx + '/' + row.path,
-				closable : true
+				href :  ctx + '/' + row.path
+				//closable : true
 			});
 			
 	    }
@@ -62,6 +52,12 @@ $(function() {
 });
 
 var MainHandler = {
+		
+	/**加载子模块树*/
+	loadSubMenu: function(nodeId){
+		$("#userModule_tree").treegrid("select",nodeId);
+		$("#userModule_tree").treegrid("expandAll",nodeId);
+	},
 
 	/* 弹出修改密码窗口 */
 	updatePassword : function() {
