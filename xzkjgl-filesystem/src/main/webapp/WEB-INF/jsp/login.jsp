@@ -14,6 +14,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  
 <link href='${ctx}/css/login/styles.css' rel='stylesheet' type='text/css' />
 <script type="text/javascript" src="${ctx }/js/jquery-easyui/jquery.min.js"></script>
+
+<!-- 表单验证插件 -->
+<script src='${ctx}/js/plugins/validate/jquery.validate.min.js' type='text/javascript'></script>
+<script src='${ctx}/js/plugins/validate/additional-methods.min.js' type='text/javascript'></script>
+<script src='${ctx}/js/plugins/validate/localization/messages_zh.js' type='text/javascript'></script>
  
 </head>
 <body id="login">
@@ -25,23 +30,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <h1> </h1>
             </div>
             <div id="darkbanner" class="banner320">
-                <h2>西藏自治区气象局科技项目登陆</h2>
+                <h2>在线考试登陆</h2>
             </div>
             <div id="darkbannerwrap">
             </div>
-            <form action="${ctx}/login.html" method="post">
+            <form class="cmxform" action="${ctx}/login.html" method="post" id="loginForm">
             <fieldset class="form">
             	<p>
             		<div id="errorMessage" style="height:20px;margin-left:80px;color:red;">${errorMessage }</div>
             	</p>
             	<br>
+            	<p><label for="username" class="error" style="height:20px;margin-left:80px;color:red;"></label></p>
                 <p>
                     <label class="loginlabel" for="username">账号:</label>
-                    <input style="border:1px solid #E1E1E1;height: 30px; line-height:30px; width: 280px;  margin-bottom: 15px; padding:0 5px;"  type="text" name="username" id="username"  onfocus="$('#errorMessage').text('');"/>
+                    <input class="required" style="border:1px solid #E1E1E1;height: 30px; width: 280px;  margin-bottom: 15px; padding:0 5px;"  type="text" name="username" id="username"  onfocus="$('#errorMessage').text('');"/>
                 </p>
+                <p><label for="password" class="error" style="height:20px;margin-left:80px;color:red;"></label></p>
                 <p>
                     <label class="loginlabel" for="password">密码:</label>
-                    <input type="password" style="border:1px solid #E1E1E1;height: 30px; line-height:30px; width: 280px;  margin-bottom: 15px; padding:0 5px;" name="password"  id="password" onfocus="$('#errorMessage').text('');" />
+                    
+                    <input class="required" type="password" style="border:1px solid #E1E1E1;height: 30px;width: 280px;  margin-bottom: 15px; padding:0 5px;" name="password"  id="password" onfocus="$('#errorMessage').text('');" />
                 </p>
                 
                 <p>
@@ -56,12 +64,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </fieldset>
         </div>
     </div>
-    
- 
-
 	
-<script type="text/javascript" src="${ctx}/js/jquery/placeholder.js"></script>
 <script type="text/javascript">
+	
+	$(function(){
+		$("#loginForm").validate({
+			messages: {
+				username: {
+					required: '请输入账号!'
+				},
+				password: {
+					required: '请输入密码!'
+				}
+			}
+		});
+	});
+	
 	function refreshCaptcha(){//刷新验证码
 	   $("#img_captcha").attr("src","${ctx}/servlet/captchaCode.html?t=" + Math.random());  
 	} 
