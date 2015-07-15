@@ -15,15 +15,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>在线考试管理平台</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
-
-<link rel="stylesheet" type="text/css" href="${ctx }/css/icon.css">
-<link rel="stylesheet" type="text/css" href="${ctx }/js/jquery-easyui/themes/bootstrap/easyui.css">
-
 <!--[if lt IE 9]>
     <script src='${ctx}js/html5shiv.js' type='text/javascript'></script>
 <![endif]-->
 <link href='${ctx}/css/bootstrap/bootstrap.css' media='all' rel='stylesheet' type='text/css' />
 <link href='${ctx}/css/bootstrap/bootstrap-responsive.css' media='all' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="${ctx }/css/icon.css">
+<link rel="stylesheet" type="text/css" href="${ctx }/js/jquery-easyui/themes/bootstrap/easyui.css">
 	
 <script type="text/javascript" src="${ctx }/js/jquery-easyui/jquery.min.js"></script>
 <script type="text/javascript" src="${ctx }/js/jquery-easyui/jquery.easyui.min.js"></script>
@@ -34,8 +32,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body class="easyui-layout">
-	<div data-options="region:'north',border:false" style="color: #fff;height: 50px; background: #0163ac; padding: 10px">
-		<div> 
+	<div data-options="region:'north',border:false" style="color: #fff;height: 110px; background: #0163ac;">
+		<div style="margin-top:10px;"> 
 			<span style="font-size: 20pt;">西藏自治区气象局科技项目管理平台</span>
 			<div style="float:right;">
 			    <span>
@@ -48,6 +46,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</span>
 					</a>
 			</div>
+			
+			 <div style="float:right;padding-top:20px;margin-right: 200px;">
+		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">局设项目管理</a>
+		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-clipart',size:'large',iconAlign:'top'">合同管理</a>
+		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-smartart',size:'large',iconAlign:'top'">档案管理</a>
+		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-chart',size:'large',iconAlign:'top'">项目统计</a>
+		        <a href="#" style="margin-left: 20px;" class="easyui-linkbutton" data-options="iconCls:'icon-large-shapes',size:'large',iconAlign:'top'">系统设置</a>
+		     </div>
 		</div>
 	</div>
 
@@ -68,7 +74,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- 中间主窗体内容 -->
 	<div data-options="region:'center',border:false">
 		<div id="mainContent_tab" class="easyui-tabs"
-			data-options="fit:true,border:false,pill:false"></div>
+			data-options="fit:true,border:false,pill:false">
+			
+			</div>
 	</div>
 
 <script type='text/javascript' src='${ctx}/js/common.js'></script>
